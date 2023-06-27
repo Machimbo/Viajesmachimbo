@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencia de Viajes machimbo</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1abc9c;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .service {
+      width: 48%;
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+    }
+
+    .service-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .service-content {
+      margin-top: 20px;
+    }
+
+    .service-content p {
+      margin-bottom: 10px;
+    }
+
+    .service-content .button {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .service-content .button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Estilos para la sección de Contacto */
+    .contact-info ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-info li {
+      margin-bottom: 10px;
+    }
+
+    /* Estilos para la sección de Redes Sociales */
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Viajes machimbo</h1>
+       <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar...">
+      <button type="button" onclick="search()">Buscar</button>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">Billetes de Avión</h2>
+      <div class="services">
+        <div class="service">
+          <h3 class="service-title">Vuelos Nacionales</h3>
+          <div class="service-content">
+            <p>Puedes comprar tu billete de avión ahora.</p>
+                        <a href="#" class="button" onclick="showMessage('Vuelos Nacionales')">Ver vuelos</a>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service-title">Vuelos Internacionales</h3>
+          <div class="service-content">
+            <p>Descubre destinos internacionales y reserva tu billete.</p>
+            <a href="#" class="button" onclick="showMessage('Vuelos Internacionales')">Ver vuelos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Billetes de Barco</h2>
+      <div class="services">
+        <div class="service">
+          <h3 class="service-title">Bata — Malabo</h3>
+          <div class="service-content">
+            <p>Compra tu billete para malabo.</p>
+            <a href="barcos.html" class="button" onclick="showMessage('Barcos Nacionales')">Ver barcos</a>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service-title">Malabo — Bata</h3>
+          <div class="service-content">
+            <p>Compra tu billete para bata ahora.</p>
+            <a href="barcos.html" class="button" onclick="showMessage('Barcos Internacionales')">Ver barcos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Hoteles</h2>
+      <div class="services">
+        <div class="service">
+          <h3 class="service-title">Hoteles y restaurantes</h3>
+          <div class="service-content">
+            <p>Encuentra alojamiento cómodo y conveniente dentro del país.</p>
+            <a href="hotel.html" class="button" onclick="showMessage('Hoteles Nacionales')">Ver hoteles</a>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service-title">Encuentra casa en Malabo y Bata</h3>
+          <div class="service-content">
+            <p>Disponemos de casas adaptadas a tus necesidades.</p>
+            <a href="casas.html" class="button" onclick="showMessage('Hoteles Internacionales')">Ver casas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Servicios</h2>
+      <div class="services">
+        <div class="service">
+          <h3 class="service-title">noticias y historias emocionantes</h3>
+          <div class="service-content">
+            <p>la guinea ecuatorial que deseas conocer.</p>
+            <a href="" class="button" onclick="showMessage('Tours Locales')">Ver tours</a>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service-title">Renueva tu pasaporte y visado</h3>
+          <div class="service-content">
+            <p>Recibe información y asesoramiento, pasaporte visado et.. .</p>
+            <a href="#" class="button" onclick="showMessage('Tours Internacionales')">comienza</a>
+          </div>
+        </div>
+      </div>
+    </section
+        </section>
+    <section class="section">
+      <h2 class="section-title">Contacto</h2>
+      <div class="contact-info">
+        <ul>
+          <li><strong>Teléfono:</strong> +240 555 380 241</li>
+          <li><strong>Email:</strong> info: machimbopecho00@gmail.com</li>
+          <li><strong>Dirección:</strong> malabo Guinea ecuatorial, s/n</li>
+        </ul>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Redes Sociales</h2>
+      <div class="social-buttons">
+        <a href="#" class="button">whatsapp</a>
+        <a href="#" class="button">Twitter</a>
+        <a href="#" class="button">Instagram</a>
+      </div>
+    </section>
+  </div>
+  <script>
+    function showMessage(service) {
+      alert("Has seleccionado:  " + service);
+    }
+  </script>
+</body>
+</html>
